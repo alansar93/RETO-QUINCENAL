@@ -15,11 +15,12 @@ const imgComienzo = "https://www.shutterstock.com/image-vector/spanish-language-
 const imgCorrecto = "https://tn.com.ar/resizer/JU-elW9Jkn9RmiUYUGwKwMqNDZQ=/767x0/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/artear/5ZQ6IXDKONEMGR4CEIQKPSHA5M.jpg"
 const imgIncorrecto = "https://thumbs.dreamstime.com/b/mensaje-de-error-48389035.jpg"
 
+imagenComienzo.src = imgComienzo;
 document.body.style.backgroundColor = "#0d1117";
 document.body.style.color = "#e6edf3";
-imagenComienzo.src = imgComienzo;
 
-function mensajeUsuario(imagenMostrar, ingCon) {
+
+function mensajeUsuario() {
     pInfoUsuario.innerHTML = ("Bienvenido a nuestra pagina " + nombreUsuario.value);
     pEmailUsuario.innerHTML = ("Su email es " + emailUsuario.value);
     pDniUsuario.innerHTML = ("Su dni es " + dniUsuario.value);
@@ -31,9 +32,8 @@ function mensajeUsuario(imagenMostrar, ingCon) {
     pEdadUsuario.style.color = "pink";
     pEmailUsuario.style.color = "pink";
     pDniUsuario.style.color = "pink";
-    imagenComienzo.src = imagenMostrar;
-    contraseña = ingCon
-    if (edadUsuario.value >= 18) {
+    imagenComienzo.src = imgCorrecto;
+        if (edadUsuario.value >= 18) {
         pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es mayor de edad")
     } else pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es menor de edad")
 }
