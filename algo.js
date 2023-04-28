@@ -30,10 +30,11 @@ function mensajeUsuario() {
     pEdadUsuario.style.color = "pink";
     pEmailUsuario.style.color = "pink";
     pDniUsuario.style.color = "pink";
+    imagenComienzo.src = imgfinal;
     if (edadUsuario.value >= 18) {
         pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es mayor de edad")
     } else pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es menor de edad")
-    
+
 }
 
 
