@@ -10,7 +10,7 @@ const pDniUsuario = document.querySelector("#dniUsuario");
 const imagenComienzo = document.querySelector("#imagenComienzo");
 const imagenFinal = document.querySelector("#imagenFinal");
 const botonEnviar = document.querySelector("#boton");
-const contraseña = document.querySelector("#contraseña");
+const inputContraseña = document.querySelector("#contraseña");
 const imgComienzo = "https://www.shutterstock.com/image-vector/spanish-language-vector-template-welcome-260nw-1792430023.jpg";
 const imgCorrecto = "https://tn.com.ar/resizer/JU-elW9Jkn9RmiUYUGwKwMqNDZQ=/767x0/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/artear/5ZQ6IXDKONEMGR4CEIQKPSHA5M.jpg"
 const imgIncorrecto = "https://thumbs.dreamstime.com/b/mensaje-de-error-48389035.jpg"
@@ -21,7 +21,10 @@ document.body.style.color = "#e6edf3";
 
 
 function mensajeUsuario() {
-    pInfoUsuario.innerHTML = ("Bienvenido a nuestra pagina " + nombreUsuario.value);
+    let contraseña = inputContraseña.value
+    
+    if (contraseña == "asd") {
+        pInfoUsuario.innerHTML = ("Bienvenido a nuestra pagina " + nombreUsuario.value);
     pEmailUsuario.innerHTML = ("Su email es " + emailUsuario.value);
     pDniUsuario.innerHTML = ("Su dni es " + dniUsuario.value);
     pInfoUsuario.style.fontFamily = "monospace";
@@ -33,7 +36,14 @@ function mensajeUsuario() {
     pEmailUsuario.style.color = "pink";
     pDniUsuario.style.color = "pink";
     imagenComienzo.src = imgCorrecto;
-        if (edadUsuario.value >= 18) {
+    if (edadUsuario.value >= 18) {
         pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es mayor de edad")
-    } else pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es menor de edad")
+    } else {
+        pEdadUsuario.innerHTML = ("Su edad es de " + edadUsuario.value + " Es menor de edad")
+    }
+    } else {
+               imagenComienzo.src = imgIncorrecto
+
+    }
 }
+
