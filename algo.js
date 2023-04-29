@@ -14,11 +14,13 @@ const inputContraseña = document.querySelector("#contraseña");
 const imgComienzo = "https://www.shutterstock.com/image-vector/spanish-language-vector-template-welcome-260nw-1792430023.jpg";
 const imgCorrecto = "https://tn.com.ar/resizer/JU-elW9Jkn9RmiUYUGwKwMqNDZQ=/767x0/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/artear/5ZQ6IXDKONEMGR4CEIQKPSHA5M.jpg"
 const imgIncorrecto = "https://thumbs.dreamstime.com/b/mensaje-de-error-48389035.jpg"
+const titulo = document.querySelector("#titulo")
 
 imagenComienzo.src = imgComienzo;
 document.body.style.backgroundColor = "#0d1117";
 document.body.style.color = "#e6edf3";
-
+titulo.style.color = "blue";
+titulo.innerHTML = "BIENVENIDO";
 
 function mensajeUsuario() {
     let contraseña = inputContraseña.value
